@@ -771,7 +771,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	
 	exports['default'] = (function () {
-	  if (typeof window === 'undefined') return '';
+	  if (typeof window === 'undefined' || !window.getComputedStyle) return '';
 	  // Thanks David Walsh
 	  var styles = window.getComputedStyle(document.documentElement, ''),
 	      pre = (Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/) || styles.OLink === '' && ['', 'o'])[1];
